@@ -1090,7 +1090,9 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 				while(foundDirection == false)
 				{
 					if(randomCorner.size() != 0)
-					direction= randomCorner.get(random.nextInt(randomCorner.size()));
+					{
+					    direction= randomCorner.get(random.nextInt(randomCorner.size()));
+					}
 					else direction = -1;
 				
 					switch(direction)
@@ -1258,7 +1260,9 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 				while(foundDirection == false)
 				{
 					if(randomSide.size() != 0)
-					direction= randomSide.get(random.nextInt(randomSide.size()));
+					{
+					    direction= randomSide.get(random.nextInt(randomSide.size()));
+					}
 					else direction = -1;
 					
 					switch(direction)
@@ -1556,19 +1560,25 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 		{
 		case 1:
 			if(!doBootStrap)
-			ponderacion(Mombo,1);
+			{
+			    ponderacion(Mombo,1);
+			}
 			else
 				bootStrap(Mombo,1);
 			break;
 		case 2:
 			if(!doBootStrap)
-			ponderacion(Pirolo,2);
+			{
+			    ponderacion(Pirolo,2);
+			}
 			else
 				bootStrap(Pirolo,2);
 			break;
 		case 3:
 			if(!doBootStrap)
-			ponderacion(Lucas,3);
+			{
+			    ponderacion(Lucas,3);
+			}
 			else
 				bootStrap(Lucas,3);
 			break;
