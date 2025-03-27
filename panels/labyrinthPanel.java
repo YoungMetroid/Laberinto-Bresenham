@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -659,7 +660,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			for(int i = 0 ; i < obstacleValues[0]*obstacleValues[0];i++)
 			{
 				
-				Random randomGenerator = new Random();
+				Random randomGenerator = new SecureRandom();
 				
 				int var1;			
 				var1 = randomGenerator.nextInt(130-01+1)+01;
@@ -689,7 +690,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 				}
 				else{
 					
-					Random random = new Random();
+					Random random = new SecureRandom();
 					int var2 = random.nextInt(10-01+1)+1;
 					if(var2 > 6)
 						{
@@ -892,7 +893,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 		coordinates.add(linkColumn);
 		visitedList.add(coordinates);
 		lastPosition.add(coordinates);
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int direction;
 		int cycle = 0;
 		setRandomSelection();
@@ -935,7 +936,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			if(linkRow > 0 && linkColumn > 0 &&
 					linkRow < obstacleValues[0]-1 && linkColumn < obstacleValues[0]-1)
 			{
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1027,7 +1028,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == 0 && linkColumn == 0)
 			{	
 				//Top left corner
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1083,7 +1084,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == 0 && linkColumn == obstacleValues[0]-1)
 			{
 				//Top right corner
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1140,7 +1141,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == obstacleValues[0]-1 && linkColumn == obstacleValues[0]-1)
 			{
 				//Bottom right corner
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1196,7 +1197,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == obstacleValues[0]-1 && linkColumn == 0)
 			{
 				//Bottom left corner
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1251,7 +1252,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == 0 && linkColumn > 0 && linkColumn < obstacleValues[0]-1)
 			{
 				//Top Side
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1318,7 +1319,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow == obstacleValues[0]-1 && linkColumn > 0 && linkColumn < obstacleValues[0]-1)
 			{
 				//Bottom Side
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1399,7 +1400,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow > 0 && linkRow < obstacleValues[0]-1 && linkColumn == 0)
 			{
 				//Left Side
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
@@ -1471,7 +1472,7 @@ public class labyrinthPanel extends JPanel implements MouseListener{
 			else if(linkRow > 0 && linkRow < obstacleValues[0]-1 && linkColumn == obstacleValues[0]-1)
 			{
 				//Right Side
-				random = new Random();
+				random = new SecureRandom();
 				direction = -1;
 				coordinates = new Vector<Integer>();
 				boolean foundDirection = false;
